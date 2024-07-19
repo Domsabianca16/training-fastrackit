@@ -1,10 +1,12 @@
 package ro.fasttrackit.course3;
 
+import java.time.LocalDate;
+
 public class Professor {
     private String lastName;
     private String firstName;
-    private int dateOfBirth;
-    private int dateOfHiring ;
+    private LocalDate dateOfBirth;
+    private LocalDate dateOfHiring ;
     private String emailAddress;
     private String isPhd;
 
@@ -24,19 +26,19 @@ public class Professor {
         this.firstName = firstName;
     }
 
-    public int getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(int dateOfBirth) {
+    public void setDateOfBirth( LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public int getDateOfHiring() {
+    public LocalDate getDateOfHiring() {
         return dateOfHiring;
     }
 
-    public void setDateOfHiring(int dateOfHiring) {
+    public void setDateOfHiring(LocalDate dateOfHiring) {
         this.dateOfHiring = dateOfHiring;
     }
 
@@ -59,7 +61,7 @@ public class Professor {
     public Professor() {
 
     }
-    public Professor(String ln , String fn , int dob , int dh , String email , String phd ){
+    public Professor(String ln , String fn , LocalDate dob , LocalDate dh , String email , String phd ){
         lastName = ln;
         firstName = fn;
         dateOfBirth = dob;
@@ -67,6 +69,7 @@ public class Professor {
         emailAddress = email;
         isPhd = phd;
     }
+
 
 
 }
