@@ -22,6 +22,7 @@ public class Homework5Runner {
                 + "\nBirth Date: " + prof1.getBirthDate());
 
     }
+
     public static void printTheStudentType(StudentType studentType) {
         switch (studentType) {
             case BACHELOR:
@@ -37,6 +38,7 @@ public class Homework5Runner {
                 System.out.println("Unknown Student Type");
         }
     }
+
     public static void printTheProfessorType(ProfessorType professorType) {
         switch (professorType) {
             case ASSISTANT:
@@ -53,3 +55,5 @@ public class Homework5Runner {
         }
     }
 }
+
+

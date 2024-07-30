@@ -10,6 +10,8 @@ public class Professor implements Human {
         professor.setFirstName("Ioana");
         professor.setLastName("Murphy");
         professor.setBirthDate(LocalDate.of(2001,6,14));
+        professor.setType(ProfessorType.PROFESSOR);
+        System.out.println(professor.getType());
         professor2.setFirstName("Ioana");
         professor2.setLastName("Murphy");
         professor2.setBirthDate(LocalDate.of(2001,6,14));
@@ -18,13 +20,16 @@ public class Professor implements Human {
         System.out.println(professor.hashCode());
         System.out.println(professor2.hashCode());
         System.out.println(professor.equals(professor2));
+
     }
     String firstName;
     String lastName;
     LocalDate birthDate;
     LocalDate dateOfHiring;
     String specializationName;
-    String type;
+    ProfessorType type;
+    public Professor() {
+    }
     public String toString(){
         return "First Name: " +  getFirstName()
                 + " Last Name: " + getLastName()
@@ -43,13 +48,8 @@ public class Professor implements Human {
     public int hashCode() {
         return Objects.hash(firstName, lastName, birthDate);
     }
-
-
-    public void setType(String type) {
-        this.type = type;
-    }
-    public String getType() {
-        return type;
+    public course5.ScholarType getType(){
+        return this.type;
     }
 
     @Override
@@ -66,7 +66,9 @@ public class Professor implements Human {
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
-
+    public void setType(ProfessorType type) {
+        this.type = type;
+    }
     @Override
     public String getFirstName() {
         return firstName;
@@ -80,5 +82,8 @@ public class Professor implements Human {
     @Override
     public LocalDate getBirthDate() {
         return birthDate;
+    }
+
+    public static interface ScholarType {
     }
 }

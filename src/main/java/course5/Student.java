@@ -10,6 +10,8 @@ public class Student implements Human {
         s.setLastName("Sam");
         s.setBirthDate(LocalDate.of(2000,5,11));
         System.out.println(s.toString());
+        s.setType(StudentType.PHD);
+        System.out.println(s.getType());
         Student s2 = new Student();
         s2.setFirstName("Ana");
         s2.setLastName("Sam");
@@ -18,7 +20,10 @@ public class Student implements Human {
         System.out.println(s.hashCode());
         System.out.println(s2.hashCode());
         System.out.println(s.equals(s2));
+
+
     }
+
     public String toString(){
         return "First Name: " + getFirstName()
                 + " Last Name: " + getLastName()
@@ -46,13 +51,8 @@ public class Student implements Human {
     LocalDate dateOfEnrollment;
     String facultyName;
     String specializationName;
-    String type;
-    public void setType(String type) {
-        this.type = type;
-    }
-    public String getType() {
-        return type;
-    }
+    StudentType type;
+
 
     @Override
     public void setFirstName(String firstName) {
@@ -84,5 +84,13 @@ public class Student implements Human {
         return birthDate;
     }
 
+    public void setType(StudentType type) {
+        this.type = type;
+    }
+
+    @Override
+    public ScholarType getType() {
+        return this.type;
+    }
 
 }

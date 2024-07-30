@@ -9,6 +9,8 @@ public interface Human {
     String getFirstName();
     String getLastName();
     LocalDate getBirthDate();
+    ScholarType getType();
+
 
 
 

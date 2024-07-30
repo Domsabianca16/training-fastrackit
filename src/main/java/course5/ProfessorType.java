@@ -1,7 +1,9 @@
 package course5;
 
-public enum ProfessorType {
+public enum ProfessorType implements ScholarType {
     ASSISTANT,
     ASSOCIATE,
-    PROFESSOR
+    PROFESSOR;
+
+
 }
