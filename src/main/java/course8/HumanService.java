@@ -9,8 +9,8 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 public class HumanService {
-    static HumanRepository<Student> studentRepository = new HumanRepository<>();
-    static HumanRepository<Professor> professorRepository = new HumanRepository<>();
+    private final static HumanRepository<Student> studentRepository = new HumanRepository<>();
+    private final static HumanRepository<Professor> professorRepository = new HumanRepository<>();
 
     public static void main(String[] args) {
         Student s1 = new Student("Karl", "Smith", LocalDate.of(2000, 4, 23), LocalDate.of(2024, 2, 10), "ETTI", "engineer", StudentType.BACHELOR, UUID.fromString("aee05e33-f8c6-445b-860b-815f9df9b90c"));
